@@ -110,6 +110,8 @@ namespace ListasCirculares
                 if (actual.Siguiente.Valor == valor)
                 {
                     actual.Siguiente = actual.Siguiente.Siguiente;
+                    if(ReferenceEquals(actual, Origen))
+                        Origen = Origen.Siguiente;
                     return;
                 }
             }
