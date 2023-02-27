@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ListasDoblementeLigadas
 {
@@ -19,12 +15,14 @@ namespace ListasDoblementeLigadas
 
             Console.WriteLine("Pruebas de busqueda");
             // Buscar por indice, se espera salga Dos
+            Console.WriteLine("Busqueda por indice");
             Nodo busquedaPorIndice = lista.BuscarPorIndice(2);
             if (busquedaPorIndice != null)
                 Console.WriteLine(busquedaPorIndice.Valor);
             else
                 Console.WriteLine("No encontrado");
 
+            Console.WriteLine("Busqueda");
             Nodo nodoBusqueda = lista.Buscar("Tres");
             if (nodoBusqueda != null)
                 Console.WriteLine(nodoBusqueda.Valor);
@@ -32,7 +30,8 @@ namespace ListasDoblementeLigadas
                 Console.WriteLine("No encontrado");
 
             // Buscar el anterior o siguiente se puede limitar a buscar el de interes y acceder a un metodo que los muestra
-            Nodo buscarLados = lista.Buscar("Tres");
+            Console.WriteLine("Busqueda para obtener anterior y siguente");
+            Nodo buscarLados = lista.Buscar("Uno");
             buscarLados.NodoAnterior();
             buscarLados.NodoSiguiente();
 
